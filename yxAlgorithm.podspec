@@ -15,11 +15,8 @@ Pod::Spec.new do |s|
 
   }
 
-  s.source_files = 'algorithm/*.swift'
+  s.source_files = 'yxAlgorithm/*.swift'
 
-  s.ios.deployment_target = '4.3'
-  s.osx.deployment_target = '10.6'
-
-  s.frameworks   = 'Foundation'
-  s.swift-version = '4.1'
+  s.ios.deployment_target = '9.0'
+  #s.swift-version = '4.1'
 end
