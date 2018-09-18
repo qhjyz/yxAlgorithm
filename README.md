@@ -15,6 +15,9 @@ pod 'yxAlgorithm', :path => 'TODO: PATH JUST CHECKOUT'
    to perform a tree depth first search
    
          dps( node , getChilds , doSomthing )
+         
+         // getChilds -- a closure to return childs of a given node
+         // dosomthing -- a cloure to perform on given node, return true if it is found
 
 
 # code
