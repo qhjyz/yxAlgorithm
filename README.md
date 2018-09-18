@@ -13,7 +13,8 @@ pod 'yxAlgorithm', :path => 'TODO: PATH JUST CHECKOUT'
 
 # tutorial
    to perform a tree depth first search
-   dps( node , getChilds , doSomthing )
+   
+         dps( node , getChilds , doSomthing )
 
 
 # code
