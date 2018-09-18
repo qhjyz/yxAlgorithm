@@ -4,12 +4,11 @@ Generic Implementation of Common Algorithm
 Easy to use 
 
 # install
+         // console
+         git checkout --depth=1 https://github.com/xuwenquan/yxAlgorithm.git
 
-git checkout --depth=1 https://github.com/xuwenquan/yxAlgorithm.git
-
-// in Podfile
-
-pod 'yxAlgorithm', :path => 'TODO: PATH JUST CHECKOUT'
+         // in Podfile
+         pod 'yxAlgorithm', :path => 'TODO: PATH JUST CHECKOUT'
 
 # tutorial
    to perform a tree depth first search
