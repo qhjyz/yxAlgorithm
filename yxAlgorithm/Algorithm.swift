@@ -9,6 +9,6 @@
 import Foundation
 
 
-class Algoritm{
+@objc open class Algoritm : NSObject{
     
 }

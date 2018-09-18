@@ -8,9 +8,11 @@
 
 import Foundation
 
-open class TreeTraverse{
+
+
+@objc open class TreeTraverse : NSObject {
     
-    open class func dfs<T>( _ root : T? , _ getChildsClosure : (T) -> [T] , _ doSomethingClosure:  (T) -> Bool  ) -> Bool {
+    @objc open class func dfs( _ root : Any? , _ getChildsClosure : (Any) -> [Any] , _ doSomethingClosure:  (Any) -> Bool  ) -> Bool {
         
         if let node = root {
             if doSomethingClosure(node) {
