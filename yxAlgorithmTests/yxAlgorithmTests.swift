@@ -45,12 +45,18 @@ class yxAlgorithmTests: XCTestCase {
         let d = TreeNode(val: 3, childs:[] )
         let e = TreeNode(val: 4, childs: [c,d])
         
-        _ = TreeTraverse.dfs( e ,{ ( node ) -> [TreeNode] in
+        var res = ""
+        
+        _ = TreeTraverse.dfs_inorder( e ,{ ( node ) -> [TreeNode] in
+            let node = node as! TreeNode
             return node.childs
         }, { (node) -> Bool in
-            print("node:\(node.val)")
+            let node = node as! TreeNode
+            res = res + "\(node.val)"
             return false
         })
+        
+        XCTAssertTrue( res == "42013" )
     }
     
     

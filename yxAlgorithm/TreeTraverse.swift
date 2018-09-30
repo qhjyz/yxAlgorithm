@@ -8,11 +8,13 @@
 
 import Foundation
 
+public typealias GetChildrensCallback = (Any) -> [Any]
+public typealias DoSomethingCallBack = (Any) -> Bool // return true if should stop
 
 
 @objc open class TreeTraverse : NSObject {
     
-    @objc open class func dfs( _ root : Any? , _ getChildsClosure : (Any) -> [Any] , _ doSomethingClosure:  (Any) -> Bool  ) -> Bool {
+    @objc open class func dfs_inorder( _ root : Any? , _ getChildsClosure : GetChildrensCallback , _ doSomethingClosure:  DoSomethingCallBack  ) -> Bool {
         
         if let node = root {
             if doSomethingClosure(node) {
@@ -21,7 +23,7 @@ import Foundation
             
             let childs = getChildsClosure( node )
             for child in childs {
-                if dfs( child , getChildsClosure , doSomethingClosure ) {
+                if dfs_inorder( child , getChildsClosure , doSomethingClosure ) {
                     return true
                 }
             }
